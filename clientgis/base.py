@@ -6,7 +6,8 @@
 #FIN PRECONDICIONES
 
 import psycopg2, psycopg2.extras
-import urllib2
+# import urllib2  # Solo python 2
+import urllib.request
 import json
 import re
 import os
@@ -75,12 +76,14 @@ class base(object):
         self.conn.commit()
         self.conn.close()
 
+    """"
     def getDataWebService(self, url_ws):
         req = urllib2.Request(url_ws)
         opener = urllib2.build_opener()
         f = opener.open(req)
         json_local = json.loads(f.read())
         return json_local
+    """
 
     #Convierte la informacion de Multipoligono mediante Json en formato WKT,
     # en un tipo Geografico apto para ser guardado en PostGis (Tipo geographics)

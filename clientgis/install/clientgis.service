@@ -1,0 +1,12 @@
+[Unit]
+Description=CLIENTGIS (Envia datos al Servidor CAT MINERO)
+
+[Service]
+ExecStart=/bin/sh /opt/api3/clientgis/start.sh
+Restart=always
+StandardOutput=/var/log/clientgis_out.log
+StandardError=/var/log/clientgis_error.log
+
+[Install]
+WantedBy=multi-user.target
+

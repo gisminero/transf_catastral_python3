@@ -2,7 +2,7 @@
 
 import os
 from threading import Timer,Thread,Event
-from Tkinter import *
+from tkinter import *
 #IMPORTANTE !! INSTALAR LO SIGUIENTE 10/07/2018
 #apt-get install python-tk
 

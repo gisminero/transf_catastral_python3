@@ -16,7 +16,7 @@ import geojson
 from shapely.geometry import shape
 #from json import dumps
 # from main import *
-import ConfigParser
+import configparser
 
 
 #from jsonwsp.client import ServiceConnection
@@ -33,7 +33,7 @@ initfile1 = os.path.join(thisfolder1, 'config.ini')
 #print (("ORIGINAL..." + str(initfile)))
 print (("LEYENDO CONFIG.INI DESDE poligon ..." + str(initfile1)))
 
-config = ConfigParser.ConfigParser()
+config = configparser.ConfigParser()
 config.read(initfile1)
 
 

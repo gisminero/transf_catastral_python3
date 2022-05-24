@@ -6,7 +6,7 @@ import os
 import time
 
 import psycopg2, psycopg2.extras
-import ConfigParser
+import configparser
 import logging
 #import datetime
 from poligon.concat import concat
@@ -127,7 +127,7 @@ thisfolder = os.path.dirname(os.path.abspath(__file__))
 initfile = os.path.join(thisfolder, 'config.ini')
 
 
-configMain = ConfigParser.ConfigParser()
+configMain = configparser.ConfigParser()
 configMain.read(initfile)
 
 horaEnvio = configMain.get('Publicacion', 'horaEnvio')

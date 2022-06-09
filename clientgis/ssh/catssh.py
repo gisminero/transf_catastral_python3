@@ -43,7 +43,8 @@ class catssh(object):
         return number_pid
 
     def checkactive(self):
-        r = self._get_pid('openvpn')
+        r = int(self._get_pid('openvpn'))
+        print(("LA RESPUESTA ERRONEA ES: " + str(r)))
         if r > 0:
             return True
         else:
